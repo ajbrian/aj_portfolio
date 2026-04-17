@@ -1,0 +1,53 @@
+/* Custom CSS overrrides and utilities */
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #020617; /* brand-darker */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ea5e9; /* brand-accent */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7; /* darker brand-accent */
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure smooth transition for mobile menu links */
+.mobile-link {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.mobile-menu-active .mobile-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Staggered delay for mobile links */
+.mobile-menu-active .mobile-link:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu-active .mobile-link:nth-child(2) { transition-delay: 0.15s; }
+.mobile-menu-active .mobile-link:nth-child(3) { transition-delay: 0.2s; }
+.mobile-menu-active .mobile-link:nth-child(4) { transition-delay: 0.25s; }
+.mobile-menu-active .mobile-link:nth-child(5) { transition-delay: 0.3s; }
+
+/* Sticky Navbar Styles */
+.nav-scrolled {
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
